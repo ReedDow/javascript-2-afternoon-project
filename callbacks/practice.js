@@ -138,8 +138,8 @@ uniq(names, function(uniqArr){
 */
 
 function each(arr,cb){
-  for(i = 0; i < arr.length-1; i++){
-    cb(i,arr[i])
+  for(i = 0; i < arr.length; i++){
+    cb(arr[i],i)
   }
 }
 
@@ -159,9 +159,11 @@ each(names, function(item, indice){
 */
 
 function getUserById(users, id, cb){
-  for(i = 0; i < users.length-1; i++){
-    if(id === users.id){
-      cb(users.i)
+
+
+  for(let i = 0; i < users.length; i++){
+    if(users[i].id === id){
+      cb(users[i])
     }
   }
 
